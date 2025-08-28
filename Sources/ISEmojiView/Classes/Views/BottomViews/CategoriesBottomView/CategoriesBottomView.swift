@@ -12,7 +12,7 @@ private let MinCellSize = CGFloat(35)
 
 internal protocol CategoriesBottomViewDelegate: AnyObject {
     
-    func categoriesBottomViewDidSelecteCategory(_ category: Category, bottomView: CategoriesBottomView)
+    func categoriesBottomViewDidSelectCategory(_ category: Category, bottomView: CategoriesBottomView)
     func categoriesBottomViewDidPressChangeKeyboardButton(_ bottomView: CategoriesBottomView)
     func categoriesBottomViewDidPressDeleteBackwardButton(_ bottomView: CategoriesBottomView)
     
@@ -62,7 +62,7 @@ final internal class CategoriesBottomView: UIView {
     
     @IBOutlet private var collectionViewToSuperViewLeadingConstraint: NSLayoutConstraint!
     
-    @IBOutlet private weak var collecitonViewToSuperViewTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var collectionViewToSuperViewTrailingConstraint: NSLayoutConstraint!
 
     // MARK: - Init functions
     
@@ -86,7 +86,7 @@ final internal class CategoriesBottomView: UIView {
         }
 
         if !needToShowDeleteButton {
-          bottomView.collecitonViewToSuperViewTrailingConstraint.priority = .defaultHigh
+          bottomView.collectionViewToSuperViewTrailingConstraint.priority = .defaultHigh
         }
 
         bottomView.selectFirstCell()
@@ -170,7 +170,7 @@ extension CategoriesBottomView: UICollectionViewDataSource {
 extension CategoriesBottomView: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.categoriesBottomViewDidSelecteCategory(categories[indexPath.item], bottomView: self)
+        delegate?.categoriesBottomViewDidSelectCategory(categories[indexPath.item], bottomView: self)
     }
     
 }

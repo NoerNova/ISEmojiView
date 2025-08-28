@@ -34,7 +34,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 - iOS8+
 - Xcode 10
 
-## Useage
+## Usage
 
 ### Installation
 
@@ -116,7 +116,7 @@ func emojiViewDidPressDismissKeyboardButton(_ emojiView: EmojiView) {
 
 #### KeyboardSettings
 
-This is a class to desribe keyboard settings. Available properties:
+This is a class to describe keyboard settings. Available properties:
 
 - `bottomType` - type of bottom view. Available variants: `.pageControl`, `.categories`. See `BottomType` enum. Default `.pageControl`.
 - `customEmojis` - array of custom emojis. To describe emojis you have to use `EmojiCategory` class.
